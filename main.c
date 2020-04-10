@@ -65,6 +65,12 @@ printf("debug [main.c]: call searchName()\n");
 #endif
 			searchName(plist,curcount);
 		}
+		else if(menu==6){
+#ifdef DEBUG
+printf("debug [main.c]: call searchStar()\n");
+#endif
+			searchStar(plist,curcount);
+		}
         }
         printf("종료됨!\n");
         return 0;
