@@ -68,3 +68,21 @@ void searchName(Product *p,int count){
         }
     }
 }
+void searchStar(Product *p,int count){
+    int scount=0;
+    int search;
+
+    printf("검색할 별점? ");
+    scanf
+	printf("  중량   가격 표준가격  별점  이름\n");
+    printf("=================================\n");
+    for(int i=0;i<count;i++){
+        if(p[i].price!=-1){
+            if(p[i].star==search)){
+                printf("%2d ",i+1);
+                readProduct(p[i]);
+                scount++;
+            }
+        }
+    }
+}
