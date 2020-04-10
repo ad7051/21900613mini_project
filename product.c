@@ -48,3 +48,22 @@ int selectMenu(){
 	return menu;
 }
 
+void searchName(Product *p,int count){
+    int scount=0;
+    char search[20];
+
+    printf("검색할 이름? ");
+    getchar();
+    fgets(search,sizeof(search),stdin);
+	printf("  중량   가격 표준가격  별점  이름\n");
+    printf("=================================\n");
+    for(int i=0;i<count;i++){
+        if(p[i].price !=-1){
+            if(strstr(p[i].name,search)){
+                printf("%2d ",i+1);
+                readProduct(p[i]);
+                scount++;
+            }
+        }
+    }
+}
