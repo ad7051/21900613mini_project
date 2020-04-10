@@ -71,6 +71,12 @@ printf("debug [main.c]: call searchStar()\n");
 #endif
 			searchStar(plist,curcount);
 		}
+		else if(menu==7){
+#ifdef DEBUG
+printf("debug [main.c]: call searchStdprice()\n");
+#endif
+			searchStdprice(plist,curcount);
+		}
         }
         printf("종료됨!\n");
         return 0;
