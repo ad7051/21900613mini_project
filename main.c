@@ -59,6 +59,12 @@ printf("debug [main.c]: call deleteProduct()\n");
 				count--;
 			}
 		}
+		else if(menu==5){
+#ifdef DEBUG
+printf("debug [main.c]: call searchName()\n");
+#endif
+			searchName(plist,curcount);
+		}
         }
         printf("종료됨!\n");
         return 0;
