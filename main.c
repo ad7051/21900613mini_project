@@ -2,6 +2,11 @@
 int main(void){
         count=0;
 	curcount=0;
+#ifdef DEBUG
+printf("debug [main.c]: call loadData()\n");
+#endif
+	count=loadData(plist);
+	curcount=count;
         while (1){
 #ifdef DEBUG
 printf("debug [main.c]: call selectMenu()\n");
@@ -77,6 +82,14 @@ printf("debug [main.c]: call searchStdprice()\n");
 #endif
 			searchStdprice(plist,curcount);
 		}
+		else if(menu==8){
+			if(count==0)
+				printf("데이터가 없습니다!\n");
+			else
+#ifdef DEBUG
+printf("debug [main.c]: call saveData()\n");
+#endif
+				saveData(plist,curcount);
         }
         printf("종료됨!\n");
         return 0;
