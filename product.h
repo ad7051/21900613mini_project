@@ -16,3 +16,5 @@ void searchPrice(Product *p,int count);
 void searchStdprice(Product *p,int count);
 void searchStar(Product *p,int count);
 int selectMenu();
+int loadData(Product p[]);
+void saveData(Product *p, int count);
