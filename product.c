@@ -115,7 +115,7 @@ void saveData(Product *p, int count){
 	fp=fopen("product.txt","wt");
 		for(int i=0;i<count;i++){
 			if(p[i].price!=-1){
-				fprintf("%d   %d    %d        %d   %s",p[i].weight,p[i].price,p[i].stdPrice,p[i].star,p[i].name);
+				fprintf(fp,"%d   %d    %d        %d   %s",p[i].weight,p[i].price,p[i].stdPrice,p[i].star,p[i].name);
 			}
 		}
 	fclose(fp);
@@ -131,7 +131,7 @@ int loadData(Product p[]){
         return 0;
     }
     for(; ; count++){
-        fscanf(fp,"%d %d %d %d",&p[i].weight,&p[i].price,&p[i].stdPrice,&p[i].star);
+        fscanf(fp,"%d %d %d %d",&p[count].weight,&p[count].price,&p[count].stdPrice,&p[count].star);
         fgets(p[count].name,sizeof(p[count].name),fp);
         if(feof(fp))
             break;

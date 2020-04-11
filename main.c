@@ -90,6 +90,7 @@ printf("debug [main.c]: call searchStdprice()\n");
 printf("debug [main.c]: call saveData()\n");
 #endif
 				saveData(plist,curcount);
+		}
         }
         printf("종료됨!\n");
         return 0;
