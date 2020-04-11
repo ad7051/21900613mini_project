@@ -119,7 +119,7 @@ void saveData(Product *p, int count){
 			}
 		}
 	fclose(fp);
-	printf("저장됨!");
+	printf("저장됨!\n");
 }
 
 int loadData(Product p[]){
